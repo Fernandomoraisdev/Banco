@@ -1,24 +1,4 @@
 <?php
-function sacar($conta, $valorASacar)
-{
-    if($valorASacar > $conta["saldo"]){
-        echo "voce nao pode sacar esse valor" . PHP_EOL;
-    }else{
-        $conta["saldo"] -= $valorASacar;
-    }
-    return $conta;
-}
-
-function exibeMensagem($mensagem)
-{
-    echo $mensagem . PHP_EOL;
-}
-
-function depositar($conta, $valorADepositar){
-    $conta["saldo"] += $valorADepositar;
-    return $conta;
-}
-
 $contaCorrente = [
     "123.456.789-10" => [
         "titular" => "Fernando Morais",
@@ -33,6 +13,33 @@ $contaCorrente = [
         "saldo" => 1000,
     ],
 ];
+
+function sacar(array $conta, float $valorASacar): array
+{
+    if($valorASacar > $conta["saldo"]){
+        echo "voce nao pode sacar esse valor" . PHP_EOL;
+    }else{
+        $conta["saldo"] -= $valorASacar;
+    }
+    return $conta;
+}
+
+function exibeMensagem(string $mensagem)
+{
+    echo $mensagem . PHP_EOL;
+}
+
+function depositar(array $conta, float $valorADepositar): array
+{
+    if($valorADepositra > 0) {
+        $conta["saldo"] += $valorADepositar;
+    }else{
+        exibeMensagem("Depoisitos precisam ser positivos");
+    }
+    return $conta;
+}
+
+
 $contaCorrente["123.456.789-10"] = sacar(
     $contaCorrente["123.456.789-10"],
     500
@@ -49,7 +56,7 @@ $contaCorrente["123.456.789-12"] = sacar(
 
 $contaCorrente["123.456.789-10"] = depositar(
     $contaCorrente["123.456.789-10"],
-    700
+    70
 );
 $contaCorrente["123.456.789-11"] = depositar(
     $contaCorrente["123.456.789-11"],
