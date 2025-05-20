@@ -24,14 +24,14 @@ function sacar(array $conta, float $valorASacar): array
     return $conta;
 }
 
-function exibeMensagem(string $mensagem)
+function exibeMensagem(string $mensagem): void
 {
     echo $mensagem . PHP_EOL;
 }
 
 function depositar(array $conta, float $valorADepositar): array
 {
-    if($valorADepositra > 0) {
+    if($valorADepositar > 0) {
         $conta["saldo"] += $valorADepositar;
     }else{
         exibeMensagem("Depoisitos precisam ser positivos");
