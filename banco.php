@@ -44,7 +44,17 @@ $contaCorrente["123.456.789-12"] = depositar(
     5000
 );
 
+titularComLetrasMaiusculas($contaCorrente ["123.456.789-10"]);
+titularComLetrasMaiusculas($contaCorrente ["123.456.789-11"]);
+titularComLetrasMaiusculas($contaCorrente ["123.456.789-12"]);
+
+unset($contaCorrente["123.456.789-10"]);
+
 foreach ($contaCorrente as $cpf => $conta) {
-    exibeMensagem("$cpf {$conta['titular']} {$conta['saldo']}");
+    ['titular' => $titular, 'saldo' => $saldo] = $conta;
+    exibeMensagem(
+        "$cpf $titular $saldo"
+    );
+
 }
 
