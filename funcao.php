@@ -1,7 +1,27 @@
 <?php
-function adiciona2($x){
-    return $x + 2;
+function sacar(array $conta, float $valorASacar): array
+{
+    if($valorASacar > $conta["saldo"]){
+        echo "voce nao pode sacar esse valor" . PHP_EOL;
+    }else{
+        $conta["saldo"] -= $valorASacar;
+    }
+    return $conta;
 }
-$sete = adiciona2(5);
-echo "Sete vale: $sete" . PHP_EOL;
+
+function exibeMensagem(string $mensagem): void
+{
+    echo $mensagem . PHP_EOL;
+}
+
+function depositar(array $conta, float $valorADepositar): array
+{
+    if($valorADepositar > 0) {
+        $conta["saldo"] += $valorADepositar;
+    }else{
+        exibeMensagem("Depoisitos precisam ser positivos");
+    }
+    return $conta;
+}
+
 
