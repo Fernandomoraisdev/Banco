@@ -9,9 +9,9 @@ function sacar(array $conta, float $valorASacar): array
     return $conta;
 }
 
-function exibeMensagem(string $mensagem): void
+function exibeMensagem(string $mensagem)
 {
-    echo $mensagem . PHP_EOL;
+    echo $mensagem . '<br>';
 }
 
 function depositar(array $conta, float $valorADepositar): array
@@ -28,3 +28,10 @@ function titularComLetrasMaiusculas(array &$conta)
 {
    $conta["titular"] = mb_strtoupper($conta['titular']);
 }
+
+echo "<ul>";
+foreach ($contaCorrente as $cpf => $conta) {
+    exibeConta($conta);
+}
+echo "</ul>";
+
