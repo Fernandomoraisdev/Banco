@@ -2,12 +2,12 @@
 require_once 'src/Conta.php';
 
 $primeiraConta = new Conta();
-$primeiraConta -> depositar(500);
-$primeiraConta -> sacar(300);
+$primeiraConta -> deposita(500);
+$primeiraConta -> saca(300);
 $primeiraConta -> defineCpfTitular('123.456.789-10');
-$primeiraConta -> recuperarNomeTitular();
+$primeiraConta -> recuperaNomeTitular();
 
 
-echo $primeiraConta -> recuperarSaldo ();
-echo $primeiraConta -> recuperarCpfTitular();
-echo $primeiraConta -> recuperarNomeTitular();
+echo $primeiraConta -> recuperaSaldo ();
+echo $primeiraConta -> recuperaCpfTitular();
+echo $primeiraConta -> recuperaNomeTitular();
