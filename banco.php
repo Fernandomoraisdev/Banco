@@ -10,3 +10,7 @@ echo $primeiraConta->recuperaNomeTitular () .PHP_EOL;
 echo $primeiraConta -> recuperaCpfTitular() . PHP_EOL;
 echo $primeiraConta -> recuperaSaldo () . PHP_EOL;
 
+$segundaConta = new Conta('123.456.789.11', 'Mikael');
+var_dump($segundaConta);
+
+echo Conta::$recuperarNumeroDeContas;
