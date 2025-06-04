@@ -1,8 +1,8 @@
 <?php
 require_once 'src/Conta.php';
+require_once 'src/Endereco.php';
 require_once 'src/Titular.php';
 require_once 'src/CPF.php';
-require_once 'src/Endereco.php';
 
 $endereco = new Endereco("Duque de Caxias", "Pilar", "Rua Carlos Alvear", "606");
 $fernando = new Titular(new CPF('123.456.789-10'), 'Fernando Morais', $endereco);
