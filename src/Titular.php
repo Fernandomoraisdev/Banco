@@ -1,9 +1,7 @@
 <?php
 
-class Titular
+class Titular extends Pessoa
 {
-    public CPF $cpf;
-    private string $nome;
     private Endereco $endereco;
 
 
@@ -23,15 +21,6 @@ class Titular
         }
     }
 
-    public function recuperaCpfTitular (): string
-    {
-        return $this->cpf->recuperaNumero();
-    }
-
-    public function recuperaNomeTitular (): string
-    {
-        return $this->nome;
-    }
 
     public function recuperaEndereco(): Endereco
     {

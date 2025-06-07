@@ -1,6 +1,6 @@
 <?php
 
-class Funcionario
+class Funcionario extends Pessoa
 {
     private string $nome;
     private string $cpf;
@@ -8,8 +8,6 @@ class Funcionario
 
     public function __construct(string $nome, string $cpf, string $cargo)
     {
-        $this->nome = $nome;
-        $this->cpf = $cpf;
         $this->cargo = $cargo;
     }
 
