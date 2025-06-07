@@ -2,8 +2,6 @@
 
 class Funcionario extends Pessoa
 {
-    private string $nome;
-    private string $cpf;
     private string $cargo;
 
     public function __construct(string $nome, string $cpf, string $cargo)
