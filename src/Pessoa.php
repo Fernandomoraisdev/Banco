@@ -20,4 +20,12 @@ class Pessoa
     {
         return $this->cpf;
     }
+
+    public function validaNomeTitular(string $nomeTitular)
+    {
+        if(strlen($nomeTitular) < 5){
+            echo "Nome precisa ter pelo menos 5 caracteres";
+            exit();
+        }
+    }
 }
