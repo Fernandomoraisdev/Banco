@@ -1,5 +1,9 @@
 <?php
 
+namespace Banco\Model;
+
+use Banco\Model\Pessoa;
+use Banco\Model\CPF;
 class Funcionario extends Pessoa
 {
     private string $cargo;

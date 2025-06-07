@@ -1,11 +1,20 @@
 <?php
-require_once 'src/Conta.php';
-require_once 'src/Endereco.php';
-require_once 'src/Titular.php';
-require_once 'src/CPF.php';
+require_once 'src/Model/CPF.php';
+require_once 'src/Model/Endereco.php';
+require_once 'src/Model/Pessoa.php';
+require_once 'src/Model/Conta/Conta.php';
+require_once 'src/Model/Conta/Titular.php';
+
+use Banco\Model\Endereco;
+use Banco\Model\CPF;
+use Banco\Model\Conta\Conta;
+use Banco\Model\Conta\Titular;
+
+
 
 $endereco = new Endereco("Duque de Caxias", "Pilar", "Rua Carlos Alvear", "606");
-$fernando = new Titular(new CPF('123.456.789-10'), 'Fernando Morais', $endereco);
+$cpf new CPF('123.456.789-10'),
+$fernando = new Titular( $cpf, 'Fernando Morais', $endereco);
 $primeiraConta = new Conta($fernando);
 $primeiraConta->deposita(500);
 $primeiraConta->saca(300);

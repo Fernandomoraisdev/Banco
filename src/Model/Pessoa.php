@@ -1,15 +1,18 @@
 <?php
 
+namespace Banco\Model;
+
+use Banco\Model\CPF;
 class Pessoa
 {
     protected $nome;
     private $cpf;
 
-    public function __construct(string $nome, string $cpf)
+    public function __construct(string $nome, CPF $cpf)
     {
         $this->validaNomeTitular($nome);
         $this->nome = $nome;
-        $this->cpf = $cpf;
+        $this->CPF = $cpf;
     }
 
     public function recuperaNome(): string
@@ -19,10 +22,10 @@ class Pessoa
 
     public function recuperaCpf(): string
     {
-        return $this->cpf;
+        return $this->cpf->recuperaNumero();
     }
 
-    protected function validaNomeTitular(string $nomeTitular)
+    protected function validaNomeTitular(string $nomeTitular): void
     {
         if(strlen($nomeTitular) < 5){
             echo "Nome precisa ter pelo menos 5 caracteres";

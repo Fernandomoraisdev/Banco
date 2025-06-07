@@ -1,4 +1,9 @@
 <?php
+
+namespace Banco\Model\Conta;
+
+use Banco\Model\Conta\Titular;
+
 class Conta
 {
     private Titular $titular;
@@ -10,7 +15,6 @@ class Conta
     {
         $this->titular = $titular;
         $this->saldo = 0;
-
         self::$numeroDeContas++;
     }
 
@@ -54,12 +58,12 @@ class Conta
 
     public function recuperaNomeTitular(): string
     {
-        return $this->titular->recuperaNomeTitular();
+        return $this->titular->recuperaNome();
     }
 
     public function recuperaCpfTitular(): string
     {
-        return $this->titular->recuperaCpfTitular();
+        return $this->titular->recuperaCpf();
     }
 
     public static function recuperaNumeroDeContas(): int
