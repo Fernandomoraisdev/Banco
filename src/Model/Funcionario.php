@@ -2,8 +2,8 @@
 
 namespace Banco\Model;
 
-use Banco\Model\Pessoa;
-use Banco\Model\CPF;
+use Alura\Banco\Model\Pessoa;
+use Alura\Banco\Model\CPF;
 class Funcionario extends Pessoa
 {
     private string $cargo;
