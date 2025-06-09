@@ -1,9 +1,7 @@
 <?php
 
-namespace Alura\Banco\Model\Conta;
+namespace Model\Conta;
 
-use Alura\Banco\Model\Pessoa;
-use Alura\Banco\Model\CPF;
 class Conta
 {
     private Titular $titular;
