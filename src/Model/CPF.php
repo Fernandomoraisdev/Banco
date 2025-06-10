@@ -1,6 +1,8 @@
 <?php
 
-namespace Model;
+namespace Alura\Banco\Model;
+
+use Alura\Banco\Model\Endereco;
 
 class CPF
 {

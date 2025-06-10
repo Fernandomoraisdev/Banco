@@ -1,16 +1,22 @@
 <?php
-namespace Model;
+namespace Alura\Banco\Model;
+
+use Alura\Banco\Model\Endereco;
+use Alura\Banco\Model\CPF;
+use Alura\Banco\Conta\Conta;
 
 class Pessoa
 {
     protected string $nome;
+    private Endereco $endereco;
     private CPF $cpf;
 
-    public function __construct(string $nome, CPF $cpf)
+    public function __construct(string $nome, CPF $cpf, Endereco $endereco)
     {
         $this->validaNome($nome);
-        $this->nome = $nome;
         $this->cpf = $cpf;
+        $this->nome = $nome;
+        $this->endereco = $endereco;
     }
 
     public function recuperaNome(): string
