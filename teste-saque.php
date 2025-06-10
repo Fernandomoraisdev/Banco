@@ -11,7 +11,8 @@ $conta = new Conta(
     new Titular(new CPF('123.456.789-15'),
         'Flavia Morais',
         new Endereco("caxias", "Bairro 13", "Rua f0", "123b")
-    )
+    ),
+    2
 );
 
 $conta->deposita(500);
