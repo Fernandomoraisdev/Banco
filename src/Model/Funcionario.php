@@ -1,16 +1,16 @@
 <?php
 namespace Alura\Banco\Model;
 
-
 class Funcionario extends Pessoa
 {
     private string $cargo;
+    private string $salario;
 
-    public function __construct(string $nome, CPF $cpf, string $cargo, Endereco $endereco)
+    public function __construct(string $nome, CPF $cpf, string $cargo, float $salario)
     {
-        parent::__construct($nome, $cpf, $endereco);
+        parent::__construct($nome, $cpf);
         $this->cargo = $cargo;
-        $this->endereco = $endereco;
+        $this->salario = $salario;
     }
 
     public function recuoeraCargo(): string
@@ -22,6 +22,16 @@ class Funcionario extends Pessoa
     {
         $this->validaNomeTitular($nome);
         $this->nome = $nome;
+    }
+
+    public function recuperaSalario(): float
+    {
+        return $this->salario;
+    }
+
+    public function calculaBonificacao(): float
+    {
+        return $this->salario * 0.1;
     }
 
 
