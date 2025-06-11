@@ -7,6 +7,7 @@ use Alura\Banco\Model\Endereco;
 use Alura\Banco\Model\CPF;
 use Alura\Banco\Model\Conta\Conta;
 
+
 $endereco = new Endereco("Duque de Caxias", "bairro 1", "Rua 2", "157");
 $cpf = new CPF("123.456.789-10");
 $fernando = new Titular( 'Fernando Morais', $cpf, $endereco);
