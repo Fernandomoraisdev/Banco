@@ -1,4 +1,5 @@
 <?php
+require_once 'autoload.php';
 
 use Alura\Banco\Service\ControladorDeBonificacoes;
 use Alura\Banco\Model\{CPF, Funcionario};
@@ -18,3 +19,7 @@ $funcionario2 = new Funcionario(
 );
 
 $controlador =  new ControladorDeBonificacoes();
+$controlador->adicionaBonificacaoDe($funcionario1);
+$controlador->adicionaBonificacaoDe($funcionario2);
+
+echo $controlador->recuperaTotal();
