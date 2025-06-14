@@ -34,9 +34,6 @@ class Funcionario extends Pessoa
 
     public function calculaBonificacao(): float
     {
-        if($this->cargo === 'Gerente'){
-            return $this->salario;
-        }
         return $this->salario * 0.1;
     }
 
