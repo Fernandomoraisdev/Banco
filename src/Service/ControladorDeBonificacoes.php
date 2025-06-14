@@ -2,6 +2,8 @@
 
 namespace Alura\Banco\Service;
 
+use Alura\Banco\Model\Funcionario\Funcionario;
+
 class ControladorDeBonificacoes
 {
     private $totalBonificacao = 0;

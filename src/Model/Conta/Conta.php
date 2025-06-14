@@ -69,5 +69,6 @@ abstract class Conta
         return 0.05;
     }
 
-    abstract protected function percentualTarifa(): float;
+
+
 }
