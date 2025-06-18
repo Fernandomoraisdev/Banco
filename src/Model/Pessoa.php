@@ -5,7 +5,7 @@ use Alura\Banco\Model\Endereco;
 use Alura\Banco\Model\CPF;
 use Alura\Banco\Conta\Conta;
 
-class Pessoa
+abstract class Pessoa
 {
     protected string $nome;
     private Endereco $endereco;
