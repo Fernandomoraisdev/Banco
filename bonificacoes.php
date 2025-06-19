@@ -24,13 +24,13 @@ $funcionario1 = new Funcionario(
 $funcionario2 = new Gerente(
     "Giovana Santos",
     new CPF("123.456.789-17"),
-    3000
+    2000
 );
 
 $funcionario3 = new Diretor(
     "Neuzimar Santos",
     new CPF("123.456.789-20"),
-    5000
+    4000
 );
 
 $funcionario5 = new EditorVideo(
