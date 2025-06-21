@@ -4,7 +4,7 @@ namespace Banco\Service;
 
 class Autenticador
 {
-    public function tentaLogin (Diretor $diretor, string $senha): bool
+    public function tentaLogin (Autenticavel $autenticavel, string $senha): void
     {
         if ($diretor->autenticar($senha)){
             echo "Ok. Usuario logado com sucesso";

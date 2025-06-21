@@ -11,4 +11,4 @@ $funcionario3 = new Diretor("Aristoteles jones",
     10000
 );
 
-$autenticador->tentalogin($funcionario3, '4321');
+$autenticador->tentalogin($funcionario3, '1234');

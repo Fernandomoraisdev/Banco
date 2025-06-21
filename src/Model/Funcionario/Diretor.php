@@ -2,10 +2,10 @@
 
 namespace Banco\Model\Funcionario;
 
-use Alura\Banco\Model\Funcionario\Funcionario;
+use Alura\Banco\Model\Autenticavel;
 
-class Diretor extends Funcionario
-{
+
+class Diretor extends Funcionario implements Autenticavel
     public function calculaSalario()
     {
         return $this->recuperaSalario() * 2;
