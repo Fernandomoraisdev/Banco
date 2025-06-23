@@ -1,7 +1,7 @@
 <?php
 
 use Alura\Banco\Model\Conta\ContaPoupanca;
-use Banco\Model\Conta\ContaCorrente;
+use Alura\Banco\Model\Conta\ContaCorrente;
 use Alura\Banco\Model\Conta\{Conta, Titular};
 use Alura\Banco\Model\{CPF, Endereco};
 
