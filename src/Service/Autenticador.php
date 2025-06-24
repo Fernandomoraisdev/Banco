@@ -1,6 +1,8 @@
 <?php
 
-namespace Banco\Service;
+namespace Alura\Banco\Service;
+
+use Alura\Banco\Model\Autenticavel;
 
 class Autenticador
 {
