@@ -64,10 +64,7 @@ abstract class Conta
         return self::$numeroDeContas;
     }
 
-    protected function percentualTarifa(): float
-    {
-        return 0.05;
-    }
+    protected function percentualTarifa(): float;
 
 
 

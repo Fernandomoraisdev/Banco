@@ -2,8 +2,6 @@
 
 namespace Banco\Model\Conta;
 
-use Alura\Banco\Model\Conta\Conta;
-
 class ContaCorrente extends Conta
 {
     protected function percentualTarifa(): float

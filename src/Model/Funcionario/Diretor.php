@@ -1,6 +1,6 @@
 <?php
 
-namespace Alura\Banco\Model\Funcionario\Funcionario;
+namespace Alura\Banco\Model\Funcionario;
 
 use Alura\Banco\Model\Autenticavel;
 
