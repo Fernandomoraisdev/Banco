@@ -14,6 +14,6 @@ class ControladorDeBonificacoes
 
     public function recuperaTotal(): float
     {
-        return $this->totalBonificacao;
+        return $this->totalBonificacao();
     }
 }

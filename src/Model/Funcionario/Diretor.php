@@ -5,7 +5,7 @@ namespace Alura\Banco\Model\Funcionario;
 use Alura\Banco\Model\Autenticavel;
 
 
-class Diretor extends Funcionario implements Autenticavel
+Abstract class Diretor extends Funcionario implements Autenticavel
 {
     public function calculaSalario()
     {
