@@ -1,6 +1,14 @@
 <?php
 namespace Alura\Banco\Model;
 
+/**
+ * Class Endereco
+ * @package Alura\Banco\Model
+ * @property-read string $cidade
+ * @property-read string $bairro
+ * @property-read string $rua
+ * @property-read string $numero
+ */
 class Endereco
 {
     private string $cidade;
