@@ -43,7 +43,7 @@ class Endereco
 
     public function  __get(String $nomeAtributo)
     {
-        echo $nomeAtributo; exit();
+        $metodo = 'recupera' . ucfirst($nomeAtributo);
+        return $this->$metodo();
     }
-
 }
