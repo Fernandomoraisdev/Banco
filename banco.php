@@ -19,10 +19,10 @@ echo $primeiraConta->recuperaCpfTitular() . PHP_EOL;
 echo $primeiraConta->recuperaSaldo() . PHP_EOL;
 
 $mikael = new Titular(new CPF('123.456.789-11'), 'Mikael Lucca', $endereco);//recebendo o mesmo endereco de fernando
-$segundaConta = new Conta($mikael)
+$segundaConta = new Conta($mikael);
 var_dump($segundaConta);
 
 $outroEndereco = new Endereco("Duque de Caxias", "Lote 15", "Catar", "253");
-$outra = new Conta(new Titular(new CPF('123.456.789-12'), 'Neuzimar Santos', $outroEndereco);
+$outra = new Conta(new Titular(new CPF('123.456.789-12'), 'Neuzimar Santos', $outroEndereco));
 unset($segundaConta);
 echo Conta::recuperaNumeroDeContas();
