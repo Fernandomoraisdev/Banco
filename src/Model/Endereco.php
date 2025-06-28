@@ -1,6 +1,8 @@
 <?php
 namespace Alura\Banco\Model;
 
+use Alura\Banco\Model\Funcionario\AcessoPropriedade;
+
 /**
  * Class Endereco
  * @package Alura\Banco\Model
@@ -11,6 +13,7 @@ namespace Alura\Banco\Model;
  */
 final class Endereco
 {
+    use AcessoPropriedade;
     private string $cidade;
     private string $bairro;
     private string $rua;
