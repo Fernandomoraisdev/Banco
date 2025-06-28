@@ -9,7 +9,7 @@ namespace Alura\Banco\Model;
  * @property-read string $rua
  * @property-read string $numero
  */
-class Endereco
+final class Endereco
 {
     private string $cidade;
     private string $bairro;

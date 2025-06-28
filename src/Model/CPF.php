@@ -4,7 +4,7 @@ namespace Alura\Banco\Model;
 
 use Alura\Banco\Model\Endereco;
 
-class CPF
+final class CPF
 {
     private string $numero;
     public function __construct(string $numero)
